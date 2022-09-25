@@ -1,0 +1,27 @@
+#alert {
+  background: #9292e3;
+  color: black;
+  padding: 20px;
+  border-radius: 5px;
+  display: none; /* 알림창 숨겨놓는 방법 */
+  /* display: block; */ /* 알림창 보이게 */
+}
+
+.list-group {
+  display: none; /* 안보이게 */
+}
+
+.show {
+  display: block; /* 보이게 */
+}
+
+/* 모달창 배경 투명한 검정  */
+.black-bg {
+  width : 100%;
+  height : 100%;
+  position : fixed; /* 이러면 맨 앞에 위치함 */
+  background : rgba(0,0,0,0.5);
+  z-index : 5; /* 이러면 맨 앞에 위치함 */
+  padding : 30px;
+  display : none;
+}

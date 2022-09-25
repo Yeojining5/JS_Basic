@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <!-- ################## CSS ################## -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <link rel="stylesheet" href="main.css">
+
+</head>
+<body>
+  <!-- ###################### Modal ########################## -->
+  <!-- css로 숨겼다가 자스로 ".show-modal" 클래스명 추가해서 보이게  -->
+  <div class="black-bg"> <!-- 모달창 배경 투명한 검정 -->
+    <div class="white-bg">
+      <h4>로그인하세요</h4>
+      <button class="btn btn-primary" id="close">닫기</button>
+    </div>
+  </div>
+  <!-- ###################### Modal ########################## -->
+
+  <nav class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+      <span class="navbar-brand">Navbar</span>
+      <button class="navbar-toggler" type="button">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </nav> 
+
+  <!-- 
+      "list-group" 클래스를 탈부착식으로 개발하면 
+      - 애니메이션 추가 쉬움, - 나중에 재사용 편리
+     ** navbar에 햄버거 버튼 누르면 -> <ul> 클래스에 show부탁해보기 **
+   -->
+  <ul class="list-group">
+    <li class="list-group-item">An item</li>
+    <li class="list-group-item">A second item</li>
+    <li class="list-group-item">A third item</li>
+    <li class="list-group-item">A fourth item</li>
+    <li class="list-group-item">And a fifth one</li>
+  </ul> 
+
+  <button>로그인</button>
+
+  <script>
+
+    // navbar 햄버거 버튼 클릭 이벤트
+    const navbtn = document.querySelector('.navbar-toggler')
+    navbtn.addEventListener('click', function() {
+      // list-group 클래스명에 show를 추가해줘
+      //document.querySelector('.list-group').classList.add('show');
+      // toggle -> show가 있으면 제거, 없으면 추가하라는 뜻
+      document.querySelector('.list-group').classList.toggle('show');
+    });
+
+    $('.show-modal').on('click', function())
+
+  </script>
+
+  <!-- ################## JS ################## -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+  <!--  <script defer src="./index.js"></script> -->
+</body>
+</html>

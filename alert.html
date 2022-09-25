@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<ht lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+  <!-- 미리 디자인해놓고 숨긴 다음에 버튼누르면 보여주기 -->
+  <div class="alert-box" id="alert">
+    <p>Alert 박스1</p>
+    <!-- <button onclick="알림창열기('none')">닫기</button> -->
+    <button id="close">닫기</button> <!-- addEventListener로 -->
+  </div>
+
+
+  <!-- block 속성을 주면 display:none 에서 다시 보여짐. 버튼을 클릭하면 div창 보여줘 -->
+  <button onclick="alertId('block')"> 버튼1 </button>
+  <button onclick="alertPw('block')"> 버튼2 </button>
+  <button onclick="알림창닫기()"> 닫기 </button>
+
+
+  <script>
+    // HTML을 조작하는 JS코드들은 하단에 작성한다 - 버그 방지
+    // function을 쓰면 긴 코드를 깔끔하게 한 단어로 축약가능
+    /* function 알림창열기(){
+      document.getElementById('alert').style.display = 'block';
+    } */
+
+    function 알림창닫기() {
+      document.getElementById('alert').style.display = 'none';
+    }
+
+    // 업그레이드 버전 - 파라미터 추가하기(일명 구멍뚫기!)
+    // 비슷한 기능의 함수를 파라미터를 통해 재사용 가능 -> 코드의 양 줄어들음
+    // 파라미터에 구멍을 대입하면 아랫줄의 구멍자리에 그대로 대입됨!
+    function 알림창열기(구멍){
+      document.getElementById('alert').style.display = 구멍;
+    } 
+
+    function alertId(구멍){
+      document.getElementById('alert').style.display = 구멍;
+      document.getElementById('alert').innerHTML = "아이디입력하세요";
+    } 
+
+    function alertPw(구멍){
+      document.getElementById('alert').style.display = 구멍;
+      document.getElementById('alert').innerHTML = "비번입력하세요";
+    } 
+
+    //알림창열기(123); // 알림창열기() 실행하는데, 구멍에 123 넣어서 실행
+    //알림창열기('안녕');
+
+    //알림창열기('block'); // alert창 보여주기
+    //알림창열기('none'); // alert창 닫아주기
+
+    // 파라미터를 쓰면 함수 하나로 다양한 기능 실행 가능! + 코드양 감소
+    function plus(구멍) {
+      2 + 구멍
+    }
+    plus(1); // 2+1
+    plus(2); // 2+2
+    plus(3); // 2+3
+
+    // onclick이 아닌, addEventListener로!!! 
+    // 'click' 이외에도 'mouseover' 등 다양한 이벤트가 있음
+    // 콜백함수 -> 파라미터 자리에 들어가는 함수. 코드를 순차적으로 실행할 때 사용
+    document.getElementById('close').addEventListener('click', function() {
+      document.getElementById('alert2').style.display = 'none';
+    });
+
+  </script>
+  
+</body>
+</ht ml>
