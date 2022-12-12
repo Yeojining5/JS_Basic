@@ -46,4 +46,33 @@
       modalbg.classList.remove('show-modal')
     });
 
+    // if/else 실습1 : 삼육구게임
+    function 삼육구게임(num) {
+      if(num % 9 == 0) {
+        console.log("박수x2");
+      } else if (num % 3 == 0) {
+        console.log("박수");
+      } else {
+        console.log("통과");
+      }
+    }
 
+    삼육구게임(6);
+    삼육구게임(9);
+    삼육구게임(12);
+    삼육구게임(11);
+
+    // if/else 실습2 : 공인중개사
+    function 합격했냐 (score1, score2){
+      if(score1 < 40 || score2 < 40) {
+        console.log("불합격!");
+        } else if(score1 + score2 >= 120) {
+          console.log("합격");
+        } else {
+          console.log("불합격!");
+        }
+    }
+
+    합격했냐(70, 70); // 합격
+    합격했냐(30, 100); // 불합격
+    합격했냐(50, 50); // 불합격
