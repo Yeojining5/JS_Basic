@@ -77,8 +77,30 @@
     합격했냐(30, 100); // 불합격
     합격했냐(50, 50); // 불합격
 
+    let main = document.querySelector(".main-bg");
+    let count = 0;
   
-  // 다크모드
-  let count = 0;
-  count++;
-  console.log(count);
+    // 다크모드
+    function darkMode() {
+      count++; // or count += 1;
+      console.log(count);
+      if(count % 2 == 1) {
+        main.style.backgroundColor = "black";
+        main.style.color = "white";
+      } else {
+        main.style.backgroundColor = "lightgray";
+        main.style.color = "black";
+      }
+    }
+
+    // 다크모드 - JQuery 버전
+    /* $('.badge').on('click', function(){
+      count++; // or count += 1;
+      console.log(count);
+      
+      if (count % 2 == 1) {
+        $('.badge').html('Light');
+      } else {
+        $('.badge').html('Dark')
+      }
+    }) */
