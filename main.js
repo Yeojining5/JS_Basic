@@ -81,7 +81,7 @@
     let count = 0;
   
     // 다크모드
-  /*   function darkMode() {
+    function darkMode() {
       count++; // or count += 1;
       console.log(count);
       if(count % 2 == 1) {
@@ -91,10 +91,10 @@
         main.style.backgroundColor = "lightgray";
         main.style.color = "black";
       }
-    } */
+    }
 
     // 다크모드 - JQuery 버전
-    $('.badge').on('click', function(){
+    /* $('.badge').on('click', function(){
       count++; // or count += 1;
       console.log(count);
       
@@ -103,4 +103,4 @@
       } else {
         $('.badge').html('Dark')
       }
-    })
+    }) */
