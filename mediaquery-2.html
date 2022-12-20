@@ -33,6 +33,18 @@
     #grid #article {
       padding-left: 25px;
     }
+    @media(max-width:800px) {
+      /* 800px보다 화면의 크기가 작을 때, grid를 block으로 변경하고 border 없애기 */
+      #grid {
+        display : block;
+      }
+      ol {
+        border-right : none;
+      }
+      h1 {
+        border-bottom : none;
+      }
+    }
   </style>
 </head>
 <body>
