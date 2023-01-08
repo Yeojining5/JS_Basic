@@ -78,6 +78,9 @@
     합격했냐(50, 50); // 불합격
 
     let main = document.querySelector(".main-bg");
+    let mode = document.querySelector(".mode");
+    let badge = document.querySelector(".badge");
+    let navbar = document.querySelector(".navbar");
     let count = 0;
   
     // 다크모드
@@ -85,11 +88,21 @@
       count++; // or count += 1;
       console.log(count);
       if(count % 2 == 1) {
-        main.style.backgroundColor = "black";
-        main.style.color = "white";
+        //main.style.color = "white";
+        main.style.backgroundColor = "darkgray";
+        mode.classList.replace("light", "dark");
+        navbar.classList.replace("navbar-light", "navbar-dark")
+        navbar.classList.replace("bg-light", "bg-dark")
+        badge.innerHTML = "Light 🔄";
+        badge.classList.replace("text-bg-dark", "text-bg-light")
       } else {
+        //main.style.color = "black";
         main.style.backgroundColor = "lightgray";
-        main.style.color = "black";
+        mode.classList.replace("dark", "light");
+        navbar.classList.replace("navbar-dark", "navbar-light");
+        navbar.classList.replace("bg-dark", "bg-light");
+        badge.innerHTML = "Dark 🔄";
+        badge.classList.replace("text-bg-light", "text-bg-dark")
       }
     }
 
@@ -99,8 +112,8 @@
       console.log(count);
       
       if (count % 2 == 1) {
-        $('.badge').html('Light');
+        $('.badge').html('Light 🔄');
       } else {
-        $('.badge').html('Dark')
+        $('.badge').html('Dark 🔄')
       }
     }) */
