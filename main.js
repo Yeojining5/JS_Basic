@@ -46,7 +46,9 @@
       modalbg.classList.remove('show-modal')
     });
 
-    // if/else 실습1 : 삼육구게임
+    /* ******************************[[ 실습 ]]]************************************* */
+    
+    // if, else 실습1 : 삼육구게임
     function 삼육구게임(num) {
       if(num % 9 == 0) {
         console.log("박수x2");
@@ -77,12 +79,42 @@
     합격했냐(30, 100); // 불합격
     합격했냐(50, 50); // 불합격
 
+
+    // 변수 문법
+    let 이름; // 선언, let 이름 = 'lee' 하고 밑에서 재할당도 가능
+    이름 = 'kim' // 할당
+    console.log(이름);
+
+    // 변수, 사칙연산 실력향상 과제
+    let age = 20; // let 재할당 가능
+    const place = '서울'; // 재할당, 재선언 불가
+
+    // 이자율 계산 퀴즈
+    // 첫 예금액이 5만원 미만이면 이율이 연 15%(연이자 15%), 5만원 이상이면 이율이 연 20%
+    // 변수에 예금액을 넣으면 2년 후의 총 예금액을 구하는 기능 만들기
+    var 예금액 = 60000;
+    var 미래예금액 = 0;
+
+    function calInterest() {
+      if(예금액 >= 50000) {
+        미래예금액 = 예금액 * 1.2 * 1.2;
+      } else {
+        미래예금액 = 예금액 * 1.15 * 1.15;
+      }
+    }
+    
+    calInterest();
+    console.log(미래예금액); // 86400
+    
+    /* **************************************************************************** */
+
+
     let main = document.querySelector(".main-bg");
     let mode = document.querySelector(".mode");
     let badge = document.querySelector(".badge");
     let navbar = document.querySelector(".navbar");
     let count = 0;
-  
+    
     // 다크모드
     function darkMode() {
       count++; // or count += 1;
