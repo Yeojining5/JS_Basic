@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p>태조 이성계가 태어난 년도는?</p>
+<input type="text" id="answer">
+<button id="send-answer" onclick="submitQuiz()">
+  제출
+</button>
+
+<script>
+
+  // 유저가 입력한 답안이 '1335'면 alert('성공')
+  // 유저가 제출버튼 누른 횟수가 3회 이상이고 답안도 못맞추면 alert('멍청아')
+  let answer;
+  let count = 0;
+
+  function submitQuiz() {
+    count++;
+    answer = document.querySelector('#answer').value;
+
+    console.log(count);
+    console.log(answer);
+
+    if(answer === "1335") {
+      alert("성공!");
+    } else if (count >= 3 && answer != "1335") {
+      alert("멍청아");
+    }
+  }
+
+  /* document.querySelector('#send-answer').addEventListener('click', function(){
+    count += 1;
+    var 유저답안 = document.querySelector('#answer').value;
+    if (유저답안 == '1335') {
+      alert('성공')
+    } else if (count >= 3 && 유저답안 != '1335'){
+      alert('멍청아')
+    }
+  }); */
+
+</script>
+</body>
+</html>
